@@ -5,7 +5,7 @@ resource "aws_kms_key" "kms_encryption_key" {
 }
 
 resource "aws_s3_bucket" "practica_1_bucket_damian_enrique" {
-      bucket = "practica_1_bucket_damian_enrique-${var.environment}"
+      bucket = "practica_1_bucket_damian_enrique"
 }
 
 resource "aws_s3_bucket_acl" "practica1_bucket_acl_damian_enrique" {
