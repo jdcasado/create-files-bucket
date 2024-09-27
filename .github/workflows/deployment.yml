@@ -9,7 +9,7 @@ on:
 env:
     AWS_REGION: 'us-east-1'
     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-    AWS_ACCESS_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+    AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
 
 jobs:
   terraform :
@@ -37,12 +37,10 @@ jobs:
             echo "Entorno productivo"
             echo environment="prod" >> $GITHUB_ENV
             echo "tf_vars_file=prod.tfvars" >> $GITHUB_ENV
-
           else
             echo "Entorno desarrollo"
             echo environment="dev" >> $GITHUB_ENV
             echo "tf_vars_file=dev.tfvars" >> $GITHUB_ENV
-
           fi
 
       - name: terraform_init
