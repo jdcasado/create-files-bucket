@@ -3,5 +3,5 @@ variable "environment" {
 }
 
 variable "archivos" {
-    type = map()
+    type = map(string)
 }
