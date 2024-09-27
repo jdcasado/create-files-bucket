@@ -5,7 +5,7 @@ resource "aws_kms_key" "kms_encryption_key" {
 }
 
 resource "aws_s3_bucket" "practica_1_bucket_damian_enrique" {
-      bucket = "damian-test-bucket-curso-terraform2-${var.environment}"
+      bucket = "practica_1_bucket_damian_enrique-${var.environment}"
 }
 
 resource "aws_s3_bucket_acl" "practica1_bucket_acl_damian_enrique" {
@@ -15,7 +15,7 @@ resource "aws_s3_bucket_acl" "practica1_bucket_acl_damian_enrique" {
 
 resource "aws_s3_object" "example" {
 
-      for_each = var.file_map
+      for_each = var.archivos
 
       key        = "/damian/enrique/${each.key}"
       content    = "${each.value}"

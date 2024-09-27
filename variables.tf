@@ -2,6 +2,6 @@ variable "environment" {
   type = string
 }
 
-variable "file_map" {
+variable "archivos" {
     type = map()
 }
